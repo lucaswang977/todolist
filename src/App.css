@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  place-items: center;
+  color: black;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.dragging {
+  color: red;
+}
+
+.not-dragging {
+  color: black;
+}
+
+.input-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-disabled :is(label, button, input[type='checkbox']) {
+  opacity: 0.2;
+}
